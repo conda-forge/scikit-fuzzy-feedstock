@@ -1,5 +1,5 @@
 {% set name = "scikit-fuzzy" %}
-{% set version = "0.3.1" %}
+{% set version = "0.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dcf8a911b54306b9a2da5a6488ee8975e60400964d102411681567652b593b9d
+  sha256: 28fc627d3f88cc1e977e2fa82509615096cb5d955f2d7e71ea3c0efaeb359d63
 
 build:
   noarch: python
