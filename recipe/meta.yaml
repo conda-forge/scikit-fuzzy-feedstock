@@ -1,28 +1,29 @@
 {% set name = "scikit-fuzzy" %}
-{% set version = "0.4.2" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1ab12424d847ede1bc79670d8058167be7c8dd660b00756e9b844817ceb1e12e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 2ee5340523aa7635ca568b9d8029c7738d05f9ea550fc89d4054b4cb50f34e7f
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   build:
     # Pure python
   host:
-    - python
+    - python >=3.8
     - pip
+    - setuptools
     - numpy >=1.6
   run:
-    - python
+    - python >=3.8
     - numpy >=1.6
     - scipy >=0.9
     - networkx >=1.9
@@ -36,7 +37,7 @@ test:
 about:
   home: http://github.com/scikit-fuzzy/scikit-fuzzy
 
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
 
