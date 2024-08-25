@@ -18,11 +18,12 @@ requirements:
   build:
     # Pure python
   host:
-    - python
+    - python >=3.8
     - pip
+    - setuptools
     - numpy >=1.6
   run:
-    - python
+    - python >=3.8
     - numpy >=1.6
     - scipy >=0.9
     - networkx >=1.9
@@ -36,7 +37,7 @@ test:
 about:
   home: http://github.com/scikit-fuzzy/scikit-fuzzy
 
-  license: BSD
+  license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE.txt
 
